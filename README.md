@@ -22,7 +22,7 @@ This project is a simple Angular application for managing products and categorie
 
 2. Navigate to the project directory: ex 
    ```bash
-   cd Angular-E-commerce-Project-main
+   cd Angular-E-commerce-Project
    ```
 
   
