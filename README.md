@@ -45,9 +45,10 @@ This project is a simple Angular application for managing products and categorie
 
 ### Example:
 
-
+#### Home page:
 ![Home Page ](./readMeIMG/image_1.jpg)
 
+#### Admin panel:
 ![Admin panel / Product ](./readMeIMG/image_2.jpg)
 
 
