@@ -1,0 +1,99 @@
+<div class="row">
+    <div class="col-12 text-center p-2">
+        <h4>All category </h4>
+    </div>
+    <br>
+</div>
+<div class="row">
+    <div class="col text-center">
+
+        @for (item of categoryList; track 'id') {
+        <button class="btn btn-primary mx-2"
+            (click)="getProductByCategory(item.id)">
+            {{item.designation }}</button>
+        }
+
+    </div>
+</div>
+<br>
+<div class="col-12 text-center p-2">
+    <h4>All Products</h4>
+</div>
+
+<div class="row">
+    @for (item of productList; track 'id') {
+    <div class="col-6">
+        <div class="box-shadow">
+            <div class="card mt-2">
+
+                <div class="card-body p-1">
+                    <div class="row">
+                        <div class="col-8">
+                            <h5 class="card-title"
+                                title="{{item.productShortName}}">{{item.designation}}</h5>
+                        </div>
+                        <div class="col-4 text-end">
+                            <p class="card-text"><span
+                                    class="text-danger fw-semibold me-2">$
+                                    {{item.prix}}</span>
+
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- test ad to cart  -->
+                    <!-- Increment/Decrement buttons and input -->
+                    <div class="row">
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-6">
+                            <span> quantite : {{item.quantite}}</span>
+                        </div>
+                        <div class="col-6">
+                            <!-- <p class="text-end pb-0 mb-0"
+                                (click)="addToCart(item.id )"><button
+                                    class="btn  text-end btn-sm btn-success p-2"><i
+                                        class="fa-solid fa-cart-plus fs-5"
+                                        style="color: #0c0d0d;"></i></button></p> -->
+
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="row">
+
+                        <div
+                            class="input-group mb-3 col-12 flex justify-content-around ">
+                            <div>
+                                <button class="btn incDecBtn" type="button"
+                                    (click)="decrement(item)"
+                                    [disabled]="item.quantite === 1">-</button>
+                                <input type="text" class="customIncDecInput"
+                                    [id]="'CartQ' + item.id" [value]="1"
+                                    readonly>
+                                <button class="btn incDecBtn" type="button"
+                                    (click)="increment(item)">+</button>
+                            </div>
+
+                            <div>
+                                <a (click)="addToCart(item.id)"
+                                    class="btn border border-secondary rounded-pill px-3 text-primary">
+                                    <i
+                                        class="fa fa-shopping-bag me-2 text-primary"></i>Add
+                                    to cart
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    }
+</div>
