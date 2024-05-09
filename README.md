@@ -20,9 +20,9 @@ This project is a simple Angular application for managing products and categorie
    ```
 
 
-2. Navigate to the project directory:
+2. Navigate to the project directory: ex 
    ```bash
-   cd 
+   cd Angular-E-commerce-Project-main
    ```
 
   
